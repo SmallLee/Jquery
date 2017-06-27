@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.2.1.min.js"></script>
+	</head>
+	<body>
+		<p><b>woshiduanluo</b></p>
+		<button id="getVal">获取表单的值</button>
+		<input type="text" id="username"/>
+		<a href="www.baidu.com">百度一下，你就知道</a>
+		<button id="getAttr">获取属性</button>
+		<script>
+			$("p").click(function(){
+				alert($('p').text())
+			});
+			$("#getVal").click(function(){
+				alert($("#username").val());
+			});
+			$("#getAttr").click(function(){
+				//获取属性
+				alert($('a').attr("href"));
+			});
+		</script>
+	</body>
+</html>
+<!--
+	val:获得输入字段的值
+	
+-->

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.2.1.min.js"></script>
+	</head>
+	<body>
+		<button id="btn1">点击</button>
+		<script>
+			var jq = $.noConflict();
+			jq(function(){
+				jq("#btn1").click(function(){
+					alert(this.innerText)
+				});
+			});
+		</script>
+	</body>
+</html>

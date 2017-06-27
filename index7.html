@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<style>
+			#clickme{
+				width: 200px;
+				text-align: center;
+				padding: 10px;
+				background-color: red;
+			}
+			#panel{
+				width: 200px;
+				text-align: center;
+				padding: 10px;
+				background-color: greenyellow;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="stop">stop</button>
+		<div id="clickme">点我下滑面板</div>
+		<div id="panel">HelloWorld</div>
+		<button id="hide">带回调的隐藏</button>
+		<p style="width: 100px;height: 100px;background-color: green;">我是段落标签</p>
+		<button id="chain">方法链</button>
+		<p id="cp">我是p标签</p>
+		<script type="text/javascript">
+			$("#clickme").click(function(){
+				$("#panel").slideDown(5000)
+			})
+			$("#stop").click(function(){
+				$("#panel").stop();
+			});
+			$("#hide").click(function(){
+				$("p").hide(5000,function(){
+					alert("p隐藏了")
+				});
+			});
+			$("#chain").click(function(){
+				$("#cp").css("color","red").slideUp(2000).slideDown(2000);
+			});
+		</script>
+	</body>
+</html>

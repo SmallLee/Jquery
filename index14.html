@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<style type="text/css">
+			.ancenster *{
+				border: 2px solid gray;
+				padding: 5px;
+			}
+			.ancenster{
+				border: 2px solid gray;
+				padding: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="ancenster">曾祖父
+			<ul>祖父
+				<li>父亲
+					<p>段落</p>
+				</li>
+			</ul>
+		</div>
+		<div class="ancenster">曾祖父1
+			<ul>祖父1
+				<li>父亲1
+					<span>段落</span>
+				</li>
+			</ul>
+		</div>
+		<script>
+			$(function(){
+				$("p").parent().css("border","4px solid green")
+				$("span").parents("ul").css("border","2px solid red")
+			});
+		</script>
+	</body>
+</html>
+<!--
+	.parent:直接父元素
+	parents返回所有父元素，一直到html
+	parents(标签)：父元素并且是指定标签
+	parentsUntil:到指定元素的父元素
+	
+-->

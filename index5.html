@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.2.1.min.js"></script>
+	</head>
+	<body>
+		<button id="start">开始</button>
+		<button id="startQ">开始队列动画</button>
+		<div style="width: 100px;height: 100px;background-color: green;"></div>
+		<div id="red" style="width: 100px;height: 100px;background-color: red;margin-top: 10px;"></div>
+		<script type="text/javascript">
+			$("#start").click(function(){
+				$("div").animate({
+					//使用预定义的值
+					height:"toggle"
+				})
+			});
+			$("#startQ").click(function(){
+				var red = $("#red");
+				red.animate({height:"200px",opacity:"0.5"});
+				red.animate({width:"200px",opacity:"1"});
+				red.animate({height:"100px",opacity:"0.2"});
+				red.animate({width:"100px",opacity:"1"})
+			});
+		</script>
+	</body>
+</html>

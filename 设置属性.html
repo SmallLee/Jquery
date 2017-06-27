@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.2.1.min.js"></script>
+	</head>
+	<body>
+		<p>菜鸟教程</p>
+		<button id="btn1">改变内容text</button>
+		<div>我是div</div>
+		<button id="btn2">改变html</button><br />
+		<a href="http://www.sina.com">新浪</a>
+		<button id="btn3">改变属性</button><br />
+		username:<input type="text" id="username" value="li"/>
+		<button id="btn4">改变字段的值</button>
+		<script>
+			$("#btn1").click(function(){
+				$("p").text("改变了")
+			});
+			$("#btn2").click(function(){
+				$("div").html("<b>加粗</b>")
+			});
+			$("#btn3").click(function(){
+				$("a").text("百度一下")
+				$("a").attr("href",function(i,originVal){
+					//0--http://www.sina.com"
+					console.log(i+"--"+originVal);
+					return "http://www.baidu.com";
+				});
+			});
+			$("#btn4").click(function(){
+				$("#username").val("adf")
+			});
+		</script>
+	</body>
+</html>

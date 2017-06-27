@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<style type="text/css">
+			.content{
+				width: 100px;
+				height: 100px;
+				border: 2px solid green;
+			}
+			.text{
+				background-color: greenyellow;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="d1">我是div</div>
+		<button id="btnAdd">添加样式</button>
+		<button id="btnRemove">移除样式</button>
+		<script>
+			$("#btnAdd").click(function(){
+				$("#d1").addClass("content text");
+			});
+			$("#btnRemove").click(function(){
+				$("#d1").removeClass("content text");
+			});
+		</script>
+	</body>
+</html>

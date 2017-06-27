@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js">
+			
+		</script>
+		<style type="text/css">
+			p{
+				width: 200px;
+				height: 60px;
+				padding: 10px;
+				background-color: red;
+				text-align: center;
+				margin: 0;
+			}
+			div{
+				background-color: green;
+				display: none;
+				text-align: center;
+				padding: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<p>点我滑出面板</p>
+		<div>Hello World</div>
+		<script type="text/javascript">
+			$(function(){
+				$("p").click(function(){
+					$("div").slideToggle(2000);
+				});
+			});
+		</script>
+	</body>
+</html>
+<!--
+	slideDown
+	slideUp
+	slideToggle
+	
+-->

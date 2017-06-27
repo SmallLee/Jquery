@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.2.1.min.js"></script>
+	</head>
+	<body>
+		<div id="d1" style="width: 200px;height: 150px;background-color: greenyellow;">
+			<p>div中的文本</p>
+			<p>div中的文本</p>
+			<p class="pp">div中的文本</p>
+		</div>
+		<button id="btnRemove">remove</button>
+		<button id="btnempTy">empty</button>
+		<button id="btnRemovep">remove过滤</button>
+		<script>
+			$("#btnRemove").click(function(){
+				$("#d1").remove();
+			});
+			$("#btnempTy").click(function(){
+				$("#d1").empty();
+			});
+			$("#btnRemovep").click(function(){
+				//移除class为pp的p标签
+				$("p").remove(".pp");
+			});
+		</script>
+	</body>
+</html>
+<!--
+	remove:删除元素及其子元素
+	empty：删除子元素
+	
+-->

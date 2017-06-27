@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.2.1.min.js"></script>
+	</head>
+	<body>
+		<p>菜鸟教程</p>
+		<ol>
+			<li>列表条目一</li>
+			<li>列表条目二</li>
+			<li>列表条目三</li>
+		</ol>
+		<button id="btn1">追加文本</button>
+		<button id="btn2">追加列表项</button>
+		<button id="btn3">追加列表项</button>
+		<p id="pp">这是一个段落</p>
+		<button id="btn4">追加</button>
+		<script>
+			$("#btn1").click(function(){
+				$("p").append("追加吧");
+			});
+			$("#btn2").click(function(){
+				$("ol").append("<li>追加列表</li>")
+			});
+			$("#btn3").click(function(){
+				$("ol").prepend("<li>追加列表</li>")
+			});
+			$("#btn4").click(function(){
+				//使用HTML标签创建文本
+				var text1 = "<p>文本</p>";
+				//使用jquery创建文本
+				var text2 = $("<p></p>").text("文本2");
+				//使用Dom创建文本
+				var text3 = document.createElement('p');
+				text3.innerText = "文本3";
+				$("#pp").append(text1,text2,text3)
+			});
+		</script>
+	</body>
+</html>
+<!--
+	append:在元素末尾追加元素
+	prepend:在元素开头插入元素
+	
+-->

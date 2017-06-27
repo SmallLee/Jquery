@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js">
+			
+		</script>
+	</head>
+	<body>
+		<p style="background-color: red;">第一个p</p>
+		<p style="background-color: blue;">第二个p</p>
+		<p style="background-color: green;">第三个p</p>
+		<button id="getAttr">获取属性</button>
+		<script type="text/javascript">
+			$("#getAttr").click(function(){
+				//rgb(255,0,0)
+//				alert("颜色是"+$("p").css("background-color"))
+				$("p").css({"backgroundColor":"yellow","fontSize":"20px"})
+			});
+		</script>
+	</body>
+</html>
+<!--
+	设置多个属性，需要使用对象
+	
+-->

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.2.1.min.js"></script>
+	</head>
+	<body>
+		<p id="content">暂无数据</p>
+		<button id="btn_get">get方式获取数据</button>
+		<script>
+			var url = "ajax/change.txt";
+			$(function(){
+				$("#btn_get").click(function(){
+					$.get(url,function(data,status){
+						console.log("数据"+data+"， 状态"+status)
+					});
+				});
+			});
+		</script>
+	</body>
+</html>

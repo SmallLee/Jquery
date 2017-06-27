@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js">
+			
+		</script>
+	</head>
+	<body>
+		<button id="btn1">开始动画</button>
+		<div style="position: absolute; width: 100px;height: 100px;background-color: #98bf21;">Hello</div>
+		<script>
+			$("#btn1").click(function(){
+				//向右移动100像素，然后改变字体
+				$("div").animate({left:"100px"});
+				$("div").animate({fontSize:"2em"});
+			});
+		</script>
+	</body>
+</html>

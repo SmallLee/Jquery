@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.2.1.min.js"></script>
+	</head>
+	<body>
+		<p>baidu</p>
+		<p  class="url">"http:www.baidu.com"</p>
+		<p>google</p>
+		<p class="url">www.google.com"</p>
+		<script type="text/javascript">
+			$(function(){
+				$("p").filter(".url").css("background-color","red")
+				$("p").not(".url").css("background-color","green");
+			});
+		</script>
+	</body>
+</html>
+<!--
+	filter:符合条件的
+	not:不符合条件的
+-->

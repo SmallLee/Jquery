@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.2.1.min.js"></script>
+	</head>
+	<body>
+		<span>span</span>
+		<h2>h2标签</h2>
+		<p>段落</p>
+		<script>
+			$(function(){
+				$("h2").siblings().css("font-size","20px")
+			});
+		</script>
+	</body>
+</html>
+<!--
+	siblings:所有同级的元素
+	next：下一个同胞元素
+	nextAll:所有下面的同胞元素
+	nextUntil:到某个元素直接的同胞元素
+	
+-->

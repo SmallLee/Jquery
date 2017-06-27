@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.2.1.min.js"></script>
+	</head>
+	<body>
+		<div>
+			<span>span标签</span>
+			<p>段落
+				<span>p的子元素</span>
+			</p>
+		</div>
+		<script>
+			$(function(){
+				$("div").children("p").css("border","2px solid red")
+				$("div").find("span").css("border","1px solid green")
+			});
+		</script>
+	</body>
+</html>
+<!--
+	children:直接子元素
+	find:子元素
+	find("*"):所有子元素
+-->

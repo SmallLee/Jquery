@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.2.1.min.js"></script>
+	</head>
+	<body>
+	<p id="p1">第一个段落</p>
+	<p class="p2">第二个段落</p>
+	<button>点我</button>
+	<button id="btn1">根据id隐藏</button>
+	<button class="btn2">根据class隐藏</button>
+	<button id="tg">toggle</button>
+	<input type="text" id="username"/>
+	<script type="text/javascript">
+		$(function(){
+			//隐藏所有元素
+//			$("button").click(function(){
+//				$("*").hide();
+//			});
+//			$("#btn1").click(function(){
+//				$("#p1").hide();
+//			});
+//			$(".btn2").click(function(){
+//				$(".p2").hide(); 
+//			});
+			$(".btn2").click(function(){
+				$("p:first").hide(2000);
+			});
+			$(".p2").mouseenter(function(){
+				console.log("鼠标移动到了class为p2的元素上")
+			});
+			//hover巨涌onmouseenter和onmouseleave的作用
+			$(".p2").hover(function(){
+				console.log("进入")
+			},function(){
+				console.log("离开")
+			}
+			);
+			$("#username").focus(function(){
+				$(this).css("background-color","red")
+			});
+			$("#username").blur(function(){
+				$(this).css("background-color","green")
+			});
+			$("#tg").click(function(){
+				$(".p2").toggle();
+			});
+		});
+	</script>
+	</body>
+</html>
+<!--
+	$("*"):隐藏所有元素
+	
+-->

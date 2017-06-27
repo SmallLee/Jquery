@@ -9,12 +9,24 @@
 	</head>
 	<body>
 		<script type="text/javascript">
-			$(document).ready(function(){
-				$("p").click(function(){
+//			$(document).ready(function(){
+//				$("p").click(function(){
+//					$(this).hide();
+//				});
+//			});
+//			简化方式
+			$(function(){
+				$('p').click(function(){
 					$(this).hide();
-				});
-			});
+				})
+			})
 		</script>
 		<p>点我会消失</p>
 	</body>
 </html>
+<!--
+	Jquery需要在文档加载完成再执行，
+	1.试图操作一个不存在的元素
+	2.获得一个未加载完成图片的大小
+	
+-->
